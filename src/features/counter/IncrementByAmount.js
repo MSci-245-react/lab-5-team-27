@@ -22,7 +22,7 @@ export default function IncrementByAmount() {
         <div>
             <button
             aria-label="Increment value"
-            onClick={() => dispatch(incrementByAmount(count, amount))}
+            onClick={() => dispatch(incrementByAmount(parseInt(amount,10)))}
             >
 
                 Increment
