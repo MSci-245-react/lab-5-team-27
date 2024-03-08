@@ -4,6 +4,7 @@ import { incrementByAmount } from './counterSlice'
 import TextField from '@mui/material/TextField';
 
 
+
 //import styles from './Counter.module.css'
 export default function IncrementByAmount() {
     const count = useSelector((state) => state.counter.value)
@@ -15,7 +16,7 @@ export default function IncrementByAmount() {
         {count}
         <TextField
           defaultValue={amount}
-          onChange={newAmount(event.target.value)}
+          onChange={(event)=>newAmount(event.target.value)}
           variant="filled"
         />
         <div>
@@ -23,6 +24,7 @@ export default function IncrementByAmount() {
             aria-label="Increment value"
             onClick={() => dispatch(incrementByAmount(count, amount))}
             >
+
                 Increment
             </button>
         </div>
